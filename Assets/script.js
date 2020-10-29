@@ -39,7 +39,9 @@ function generatePassword() {
         resChar = wanted[Math.floor(Math.random() * wanted.length)];
         password += resChar;
     }
-
+    console.log(resChar)
+    console.log(wanted)
+    console.log(password)
 }
 
 
@@ -50,9 +52,9 @@ var generateBtn = document.querySelector("#generate");
 function writePassword() {
 
     var passwordText = document.querySelector("#password");
-    passwordText.value = ;
+    passwordText.value = password;
 
-    console.log(passwordText.value)
+
 }
 
 
