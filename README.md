@@ -11,3 +11,4 @@ after user choices is gathered, the javaScript loops through a string of selecte
 the password is then displayed in the text area. 
 
 web app link: https://greysonkirk.github.io/PassGen/
+
