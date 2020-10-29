@@ -8,4 +8,6 @@ when the user clicks on the "Generate Password" button, they will be prompted to
 After that, they will confirm if they want lowercase letters, uppercase letters, 0-9 numbers, and/or special characters. 
 
 after user choices is gathered, the javaScript loops through a string of selected characters and generates a random password. 
-the password is then displayed in the text area 
+the password is then displayed in the text area. 
+
+web app link: https://greysonkirk.github.io/PassGen/
