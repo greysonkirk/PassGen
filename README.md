@@ -12,3 +12,4 @@ the password is then displayed in the text area.
 
 web app link: https://greysonkirk.github.io/PassGen/
 
+![](Assets/PassGen.JPG)
