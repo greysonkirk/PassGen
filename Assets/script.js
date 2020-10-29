@@ -6,9 +6,6 @@ let specChar = ["!@#$%^><&*()?"];
 // let specChar = ["!", "@", "#", "$", "%", "^", ">", "<", "&", "*", "(", ")", "?"]
 
 
-
-
-
 function generatePassword() {
     // user prompts 
     let charLim = prompt("Select character amount between 8 and 128?");
@@ -29,6 +26,7 @@ function generatePassword() {
     }
 
     // console.log(criteria)
+    var passRes = "";
     var wanted = [];
     if (lowWant) wanted += (lowChar)
     if (upWant) wanted += (capChar)
@@ -37,11 +35,12 @@ function generatePassword() {
 
     for (let i = 0; i < charLim; i++) {
         resChar = wanted[Math.floor(Math.random() * wanted.length)];
-        password += resChar;
+        passRes += resChar;
     }
-    console.log(resChar)
+    console.log(passRes)
     console.log(wanted)
-    console.log(password)
+    var passwordText = document.querySelector("#password");
+    passwordText.value = passRes
 }
 
 
@@ -49,15 +48,15 @@ function generatePassword() {
 var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
-function writePassword() {
+// function writePassword() {
 
-    var passwordText = document.querySelector("#password");
-    passwordText.value = password;
+//     var passwordText = document.querySelector("#password");
+//     passwordText.value = password;
+//     console.log(passwordText);
 
-
-}
+// }
 
 
 
 // Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+generateBtn.addEventListener("click", generatePassword);
