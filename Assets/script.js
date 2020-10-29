@@ -1,9 +1,9 @@
 //Set arrays to choose from 
 let lowChar = ["abcdefghijklmnopqrstuvwxyz"];
 let capChar = ["ABCDEFGHIJKLMNOPQRSTUVWXYZ"];
-let numChar = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
-let specChar = ["!@#$%^><&*()?"]
-    // let specChar = ["!", "@", "#", "$", "%", "^", ">", "<", "&", "*", "(", ")", "?"]
+let numChar = ["0123456789"];
+let specChar = ["!@#$%^><&*()?"];
+// let specChar = ["!", "@", "#", "$", "%", "^", ">", "<", "&", "*", "(", ")", "?"]
 
 
 
@@ -27,26 +27,19 @@ function generatePassword() {
         specWant = confirm("Do you want special characters?");
         numWant = confirm("Do you want number characters?");
     }
-    var password = "";
-    // let criteria = {
-    //     length: charLim,
-    //     lower: lowWant,
-    //     upper: upWant,
-    //     number: numWant,
-    //     special: specWant
-    // }
+
     // console.log(criteria)
     var wanted = [];
-    if (lowWant) password += (lowChar)
-    if (upWant) password += (capChar)
-    if (specWant) password += (specChar)
-    if (numWant) password += (numChar)
+    if (lowWant) wanted += (lowChar)
+    if (upWant) wanted += (capChar)
+    if (specWant) wanted += (specChar)
+    if (numWant) wanted += (numChar)
 
-    for (let i = 0; i <= charLim; i++) {
-        password = password[Math.floor(Math.random() * password.length)];
-
+    for (let i = 0; i < charLim; i++) {
+        resChar = wanted[Math.floor(Math.random() * wanted.length)];
+        password += resChar;
     }
-    console.log(password);
+
 }
 
 
@@ -55,11 +48,11 @@ var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
 function writePassword() {
-    var genPass = generatePassword();
+
     var passwordText = document.querySelector("#password");
+    passwordText.value = ;
 
-    passwordText.value = genPass;
-
+    console.log(passwordText.value)
 }
 
 
